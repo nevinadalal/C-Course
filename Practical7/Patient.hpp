@@ -1,22 +1,20 @@
 #ifndef Patient_hpp
 #define Patient_hpp
 
-#include <stdio.h>
-#include <iostream>
-#include <vector>
-#include "Blood.hpp"
-#include "Date.hpp"
+#include<stdio.h>
+#include<vector>
+#include<iostream>
+#include "practical7Blood.hpp"
+#include "practical7Date.hpp"
 using namespace std;
-
 class Patient{
-protected:
-  string name;
-  vector<Blood> table;
-public:
-  Patient( string );
-  void addRecord(Blood);
-  void print ();
-  void printReport();
-
+  protected:
+  string fullname; 
+  vector<Blood>listofpatients;
+  public:
+  Patient(string);
+  void addrecord(Blood);
+  void print();
+  void printreport();
 };
 #endif

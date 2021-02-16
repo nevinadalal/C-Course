@@ -35,7 +35,7 @@ class Patient
     string name;
     //constructor
     Patient(string name) {
-      name = name;
+      this->name = name;
     }
     
     //the vector will be used to store all the records of a patient
@@ -50,7 +50,7 @@ class Patient
     //printing the report of the patient
     void printReport()
     {
-      cout << "The report of the patient" << endl;
+      cout << "The report of the patient " << name << "." << endl;
 
       Blood highest = bloodList.at(0);
       vector<Blood> list_highest;
@@ -67,7 +67,6 @@ class Patient
         //check if the current systolic value is over 140 and if it's higher than the current highest value
         if(temp.systolic > 140 && temp.systolic >= highest.systolic)
         {
-          cout<<list_highest.size()<<endl;
           //if the value is the same as the current highest, then store it in the list
           if(highest.systolic == temp.systolic) 
           {
