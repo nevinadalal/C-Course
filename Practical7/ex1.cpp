@@ -55,7 +55,7 @@ class Patient
       Blood highest = bloodList.at(0);
       vector<Blood> list_highest;
       list_highest.push_back(highest);
-      int average = 0;
+      float average = 0.0f;
 
       //iterate through the blood record to get the highest systolic values and to calculate the average diastolic value.
       for(int i=0; i < bloodList.size(); i++)
